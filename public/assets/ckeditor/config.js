@@ -16,7 +16,7 @@ CKEDITOR.editorConfig = function( config ) {
   config.filebrowserUploadUrl = 'http://2study.edu.vn/api/upload/ckeditor';
   // config.filebrowserBrowseUrl = 'http://localhost:8080/api/upload';
   config.dataParser = function(data){
-    console.log(data);
+    //console.log(data);
     if (data){
       var keys = Object.keys(data)
       return data[keys[0]].url
@@ -24,22 +24,22 @@ CKEDITOR.editorConfig = function( config ) {
     return 'http://www.unixstickers.com/image/data/stickers/golang/golang.sh.png'
   }
 
-	config.toolbarGroups = [
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'forms' },
-		{ name: 'tools' },
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'others' },
-		'/',
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'about' }
-	];
+  config.toolbarGroups = [
+    { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+    { name: 'links', groups: [ 'links' ] },
+    { name: 'insert', groups: [ 'insert' ] },
+    { name: 'forms', groups: [ 'forms' ] },
+    { name: 'tools', groups: [ 'tools' ] },
+    { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+    { name: 'others', groups: [ 'others' ] },
+    '/',
+    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+    { name: 'styles', groups: [ 'styles' ] },
+    { name: 'colors', groups: [ 'colors' ] },
+    { name: 'about', groups: [ 'about' ] }
+  ];//asd
 
   //config.extraPlugins = 'simage';
 
